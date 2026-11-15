@@ -28,6 +28,7 @@ fraudTest.csv
 *.joblib
 *.pkl
 *.h5
+!models/fraud_detection_model.joblib
 
 # OS generated files
 Thumbs.db
