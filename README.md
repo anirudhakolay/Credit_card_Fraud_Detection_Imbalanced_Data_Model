@@ -1,3 +1,14 @@
+---
+title: Credit Card Fraud Detection
+emoji: 💳
+colorFrom: blue
+colorTo: red
+sdk: gradio
+sdk_version: 6.32.0
+app_file: app.py
+pinned: false
+---
+
 # Credit Card Fraud Detection using Machine Learning on Imbalanced Data
 
 An end-to-end, beginner-friendly Machine Learning project for detecting fraudulent credit card transactions in heavily imbalanced financial datasets.
