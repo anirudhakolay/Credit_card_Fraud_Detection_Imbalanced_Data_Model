@@ -32,8 +32,12 @@ def predict_test_dataset(test_path: str = "fraudTest.csv", sample_size: int = 50
     label_encoders = artifacts["label_encoders"]
 
     print(f"Loaded trained model: {model_name}")
-    print(f"Reading test data from '{test_path}' (Sample: {sample_size:,} rows)...")
-    test_df = pd.read_csv(test_path, nrows=sample_size)
+    if sample_size and sample_size > 0:
+        print(f"Reading test data from '{test_path}' (Sample: {sample_size:,} rows)...")
+        test_df = pd.read_csv(test_path, nrows=sample_size)
+    else:
+        print(f"Reading full test data from '{test_path}' (all transactions)...")
+        test_df = pd.read_csv(test_path)
 
     X_test, y_test, _ = prepare_data(test_df, target_col="is_fraud", label_encoders=label_encoders)
 
