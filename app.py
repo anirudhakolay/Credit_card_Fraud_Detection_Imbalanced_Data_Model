@@ -146,7 +146,7 @@ def predict_fraud(
 
 
 # --- Gradio UI Layout ---
-with gr.Blocks(theme=gr.themes.Soft(primary_hue="blue")) as demo:
+with gr.Blocks(title="Credit Card Fraud Detector") as demo:
     gr.Markdown(
         """
         # 💳 Credit Card Fraud Detection System
@@ -258,9 +258,6 @@ with gr.Blocks(theme=gr.themes.Soft(primary_hue="blue")) as demo:
             city_pop_input,
             distance_input,
         ],
-        outputs=[output_banner, output_probs, output_action, output_explanation],
-        fn=predict_fraud,
-        cache_examples=False,
     )
 
 if __name__ == "__main__":
